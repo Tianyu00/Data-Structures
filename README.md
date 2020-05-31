@@ -4,7 +4,7 @@ These problems here come from coursera course 'Data Structures'.
 
 They are about [basic data structures](#week-1-basic-data-structures), [priority queues and disjoint sets](#week-2-priority-queues-and-disjoint-sets), [hash tables](#week-3-hash-tables) and [binary search trees](#week-4-binary-search-trees).
 
-### week 1 basic data structures
+## week 1 basic data structures
 [detailed problem description](week1_basic_data_structures/week1_basic_data_structures.pdf)
 
 #### 1 [Check brackets in the code](week1_basic_data_structures/1_brackets_in_code/check_brackets.py)
@@ -68,8 +68,71 @@ Output:
 **Task** Given a sequence 𝑎1, . . . , 𝑎𝑛 of integers and an integer 𝑚 ≤ 𝑛, find the maximum among {𝑎𝑖, . . . , 𝑎𝑖+𝑚−1} for every 1 ≤ 𝑖 ≤ 𝑛 − 𝑚 + 1. A naive 𝑂(𝑛𝑚) algorithm for solving this problem scans each window separately. Your goal is to design an 𝑂(𝑛) algorithm.
 
 
-### week 2 priority queues and disjoint sets
-[detailed problem description]()
+## week 2 priority queues and disjoint sets
+[detailed problem description](week2_priority_queues_and_disjoint_sets/week2_priority_queues_and_disjoint_sets.pdf)
+
+#### 1 [Convert array into heap](week2_priority_queues_and_disjoint_sets/1_make_heap/build_heap.py)
+
+**Task** In this problem you will convert an array of integers into a heap. This is the crucial step of the sorting algorithm called HeapSort. It has guaranteed worst-case running time of 𝑂(𝑛 log 𝑛) as opposed to QuickSort’s average running time of 𝑂(𝑛 log 𝑛). QuickSort is usually used in practice, because typically it is faster, but HeapSort is used for external sort when you need to sort huge files that don’t fit into memory of your computer.
+
+Your task is to implement this first step and convert a given array of integers into a heap. You will do that by applying a certain number of swaps to the array. Swap is an operation which exchanges elements 𝑎𝑖 and 𝑎𝑗 of the array 𝑎 for some 𝑖 and 𝑗. You will need to convert the array into a heap using only 𝑂(𝑛) swaps.
+
+Example:\
+Input:
+```
+5
+5 4 3 2 1
+```
+Output:
+```
+3
+1 4
+0 1
+1 3
+```
+
+#### 2 [Parallel processing](week2_priority_queues_and_disjoint_sets/2_job_queue/job_queue.py)
+
+**Task** Task. You have a program which is parallelized and uses 𝑛 independent threads to process the given list of 𝑚 jobs. Threads take jobs in the order they are given in the input. If there is a free thread, it immediately takes the next job from the list. If a thread has started processing a job, it doesn’t interrupt or stop until it finishes processing the job. If several threads try to take jobs from the list simultaneously, the thread with smaller index takes the job. For each job you know exactly how long will it take any thread to process this job, and this time is the same for all the threads. You need to determine for each job which thread will process it and when will it start processing.
+
+Example:\
+Input:
+```
+2 5
+1 2 3 4 5
+```
+Output:
+```
+0 0
+1 0
+0 1
+1 2
+0 4
+```
+
+#### 3 [Merging tables](week2_priority_queues_and_disjoint_sets/3_merging_tables/merging_tables.py)
+
+In this problem, your goal is to simulate a sequence of merge operations with tables in a database. (This is an application of disjoint sets data structure. Pls see the detail description file for more about problem description.)
+
+Example:\
+Input:
+```
+5 5
+1 1 1 1 1
+3 5
+2 4
+1 4
+5 4
+5 3
+```
+Output:
+```
+2
+2
+3
+5
+5
+```
 
 
 ### week 3 hash tables
