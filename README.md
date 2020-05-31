@@ -137,7 +137,7 @@ Output:
 ## week 3 hash tables
 [detailed problem description](week3_hash_tables/week3_hash_tables.pdf)
 
-#### 1 Phone book
+#### 1 [Phone book](week3_hash_tables/1_phone_book/phone_book.py)
 
 In this task your goal is to implement a simple phone book manager. It should be able to process the following types of user’s queries:
 - `add number name`. It means that the user adds a person with name name and phone number number to the phone book. If there exists a user with such number already, then your manager has to overwrite the corresponding name.
@@ -171,7 +171,7 @@ Mom
 daddy
 ```
 
-#### 2 Hashing with chains
+#### 2 [Hashing with chains](week3_hash_tables/2_hash_chains/hash_chains.py)
 In this task your goal is to implement a hash table with lists chaining. 
 
 Your program should support the following kinds of queries:
@@ -207,7 +207,7 @@ HellO
 GooD luck
 ```
 
-#### 3 Find pattern in text
+#### 3 [Find pattern in text](week3_hash_tables/3_hash_substring/hash_substring.py)
 In this problem your goal is to implement the Rabin–Karp’s algorithm for searching the given pattern in the given text.
 
 Example:\
@@ -221,7 +221,7 @@ Output:
 0 4
 ```
 
-#### 4 Substring equality
+#### 4 [Substring equality](week3_hash_tables/4_substring_equality/substring_equality.py)
 In this problem, you will use hashing to design an algorithm that is able to preprocess a given string 𝑠 to answer any query of the form “are these two substrings of 𝑠 equal?” efficiently. The first line contains a string 𝑠 consisting of small Latin letters. The second line contains the number of queries 𝑞. Each of the next 𝑞 lines specifies a query by three integers 𝑎, 𝑏, and 𝑙.
 
 Examples:
@@ -247,4 +247,62 @@ No
 #### 6 Pattern matching with mismatches
 
 ## week 4 binary search trees
-[detailed problem description]()
+[detailed problem description](week4_binary_search_trees/week4_binary_search_trees.pdf)
+
+#### 1 [Binary tree traversals](week4_binary_search_trees/1_tree_traversals/tree-orders.py)
+You are given a rooted binary tree. Build and output its in-order, pre-order and post-order traversals.
+
+Example:\
+Input:
+```
+5
+4 1 2
+2 3 4
+5 -1 -1
+1 -1 -1
+3 -1 -1
+```
+Output:
+```
+1 2 3 4 5
+4 2 1 3 5
+1 3 2 5 4
+```
+
+#### 2 [Is it a binary search tree?](week4_binary_search_trees/2_is_bst/is_bst.py)
+
+You are given a binary tree with integers as its keys. You need to test whether it is a correct binary search tree. The definition of the binary search tree is the following: for any node of the tree, if its key is 𝑥, then for any node in its left subtree its key must be strictly less than 𝑥, and for any node in its right subtree its key must be strictly greater than 𝑥. In other words, smaller elements are to the left, and bigger elements are to the right. You need to check whether the given binary tree structure satisfies this condition. You are guaranteed that the input contains a valid binary tree. That is, it is a tree, and each node has at most two children.
+
+Example:\
+Input:
+```
+3
+2 1 2
+1 -1 -1
+3 -1 -1
+```
+Output:
+```
+CORRECT
+```
+
+#### 3 [Is it a binary search tree? Hard version.](week4_binary_search_trees/3_is_bst_advanced/is_bst_hard.py)
+
+You are given a binary tree with integers as its keys. You need to test whether it is a correct binary search tree. Note that there can be duplicate integers in the tree, and this is allowed. The definition of the binary search tree in such case is the following: for any node of the tree, if its key is 𝑥, then for any node in its left subtree its key must be strictly less than 𝑥, and for any node in its right subtree its key must be greater than or **equal to** 𝑥. In other words, smaller elements are to the left, bigger elements are to the right, and duplicates are always to the right. You need to check whether the given binary tree structure satisfies this condition. You are guaranteed that the input contains a valid binary tree. That is, it is a tree, and each node has at most two children.
+
+Example:\
+Input:
+```
+3
+2 1 2
+2 -1 -1
+3 -1 -1
+```
+Output:
+```
+INCORRECT
+```
+
+#### 4 Set with range sums
+
+#### 5 Rope
