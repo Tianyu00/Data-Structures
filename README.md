@@ -134,9 +134,117 @@ Output:
 5
 ```
 
+## week 3 hash tables
+[detailed problem description](week3_hash_tables/week3_hash_tables.pdf)
 
-### week 3 hash tables
-[detailed problem description]()
+#### 1 Phone book
 
-### week 4 binary search trees
+In this task your goal is to implement a simple phone book manager. It should be able to process the following types of user’s queries:
+- `add number name`. It means that the user adds a person with name name and phone number number to the phone book. If there exists a user with such number already, then your manager has to overwrite the corresponding name.
+- `del number`. It means that the manager should erase a person with number number from the phone book. If there is no such person, then it should just ignore the query.
+- `find number`. It means that the user looks for a person with phone number number. The manager should reply with the appropriate name, or with string “not found" (without quotes) if there is no such person in the book.
+
+Example:\
+Input:
+```
+12
+add 911 police 
+add 76213 Mom 
+add 17239 Bob 
+find 76213
+find 910
+find 911
+del 910
+del 911
+find 911
+find 76213
+add 76213 daddy 
+find 76213
+```
+Output:
+```
+Mom
+not found 
+police 
+not found 
+Mom
+daddy
+```
+
+#### 2 Hashing with chains
+In this task your goal is to implement a hash table with lists chaining. 
+
+Your program should support the following kinds of queries:
+- `add string` — insert string into the table. If there is already such string in the hash table, then just ignore the query.
+- `del string` — remove string from the table. If there is no such string in the hash table, then just ignore the query.
+- `find string` — output “yes" or “no" (without quotes) depending on whether the table contains string or not.
+- `check 𝑖` — output the content of the 𝑖-th list in the table. Use spaces to separate the elements of the list. If 𝑖-th list is empty, output a blank line.
+
+Example:
+Input:
+```
+5
+12
+add world 
+add HellO 
+check 4 
+find World 
+find world 
+del world 
+check 4 
+del HellO 
+add luck 
+add GooD 
+check 2 
+del good
+```
+Output:
+```
+HellO world 
+no
+yes
+HellO
+GooD luck
+```
+
+#### 3 Find pattern in text
+In this problem your goal is to implement the Rabin–Karp’s algorithm for searching the given pattern in the given text.
+
+Example:\
+Input:
+```
+aba
+abacaba
+```
+Output:
+```
+0 4
+```
+
+#### 4 Substring equality
+In this problem, you will use hashing to design an algorithm that is able to preprocess a given string 𝑠 to answer any query of the form “are these two substrings of 𝑠 equal?” efficiently. The first line contains a string 𝑠 consisting of small Latin letters. The second line contains the number of queries 𝑞. Each of the next 𝑞 lines specifies a query by three integers 𝑎, 𝑏, and 𝑙.
+
+Examples:
+Input:
+```
+trololo
+4
+0 0 7
+2 4 3
+3 5 1
+1 3 2
+```
+Output:
+```
+Yes
+Yes
+Yes
+No
+```
+
+#### 5 Longest common substring
+
+#### 6 Pattern matching with mismatches
+
+## week 4 binary search trees
 [detailed problem description]()
